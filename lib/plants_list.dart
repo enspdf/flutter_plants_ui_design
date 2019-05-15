@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_plants_ui_design/plant_detail.dart';
 
 class PlantList extends StatefulWidget {
   @override
@@ -240,7 +241,11 @@ class _PlantListState extends State<PlantList> {
                     ),
                     SizedBox(width: 10),
                     InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => PlantDetail(),
+                        ));
+                      },
                       child: Container(
                         height: 30,
                         width: 30,
